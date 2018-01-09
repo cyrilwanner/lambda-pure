@@ -1,12 +1,12 @@
 {
-  "name": "lambda-pure-prompt",
+  "name": "@cwanner/lambda-pure-prompt",
   "version": "1.0.0",
   "description": "Pretty, minimal and fast ZSH prompt",
   "license": "MIT",
-  "repository": "marszall87/lambda-pure",
+  "repository": "cyrilwanner/lambda-pure",
   "author": {
-    "name": "Michał Nykiel",
-    "email": "marszall87@gmail.com"
+    "name": "Cyril Wanner",
+    "email": "info@cyr.li"
   },
   "engines": {
     "node": ">=0.10.0"

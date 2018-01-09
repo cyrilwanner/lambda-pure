@@ -2,8 +2,11 @@
 
 > Pretty, minimal and fast ZSH prompt based on Pure
 
-<img src="screenshot.png" width="864">
-
+## Fork
+This is a fork of [marszall87/lambda-pure](https://github.com/marszall87/lambda-pure) with following changes:
+* Updated async.zsh so it works with newer versions of zsh
+* Change default git arrows to the original ones: ⇣ and ⇡
+* Add the current time to the end of the prompt
 
 ## Overview
 
@@ -18,7 +21,7 @@ Most prompts are cluttered, ugly and slow. I wanted something visually pleasing 
 - Prompt character turns red if the last command didn't exit with `0`.
 - Command execution time will be displayed if it exceeds the set threshold.
 - Username and host only displayed when in an SSH session.
-- Shows the current path in the title and the [current folder & command](screenshot-title-cmd.png) when a process is running.
+- Shows the current path in the title and the current folder & command when a process is running.
 
 ## Install
 
@@ -27,7 +30,7 @@ Can be installed with `npm` or manually. Requires git 2.0.0+ and ZSH 5.0.0+.
 ### npm
 
 ```console
-$ npm install --global lambda-pure-prompt
+$ npm install --global @cwanner/lambda-pure-prompt
 ```
 
 That's it. Skip to [Getting started](#getting-started).
@@ -101,11 +104,11 @@ Defines the prompt symbol. The default value is `λ`.
 
 ### `PURE_GIT_DOWN_ARROW`
 
-Defines the git down arrow symbol. The default value is `▼`.
+Defines the git down arrow symbol. The default value is `⇣`.
 
 ### `PURE_GIT_UP_ARROW`
 
-Defines the git up arrow symbol. The default value is `▲`.
+Defines the git up arrow symbol. The default value is `⇡`.
 
 ### `PURE_GIT_DIRTY`
 
@@ -160,5 +163,5 @@ $ zgen load marszall87/lambda-pure
 
 ## License
 
-MIT © [Michał Nykiel](https://github.com/marszall87)
-based on [Pure by Sindre Sorhus](https://github.com/sindresorhus/pure)
+MIT © [Cyril Wanner](https://github.com/cyrilwanner)
+based on [Michał Nykiel](https://github.com/marszall87) and [Pure by Sindre Sorhus](https://github.com/sindresorhus/pure)
