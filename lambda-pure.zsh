@@ -81,8 +81,8 @@ prompt_pure_check_git_arrows() {
 	arrow_status=(${(ps:\t:)arrow_status})
 	local arrows left=${arrow_status[1]} right=${arrow_status[2]}
 
-	(( ${right:-0} > 0 )) && arrows+="${PURE_GIT_DOWN_ARROW:-▼}"
-	(( ${left:-0} > 0 )) && arrows+="${PURE_GIT_UP_ARROW:-▲}"
+	(( ${right:-0} > 0 )) && arrows+="${PURE_GIT_DOWN_ARROW:-⇣}"
+	(( ${left:-0} > 0 )) && arrows+="${PURE_GIT_UP_ARROW:-⇡}"
 
 	[[ -n $arrows ]] && prompt_pure_git_arrows=" ${arrows}"
 }
