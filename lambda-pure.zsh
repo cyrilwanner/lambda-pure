@@ -149,6 +149,8 @@ prompt_pure_preprompt_render() {
 	preprompt+=$prompt_pure_username
 	# execution time
 	preprompt+="%F{cyan}${prompt_pure_cmd_exec_time}%f"
+	# time
+	preprompt+=" %f%*"
 
 	# NodeJS version
 	local rpreprompt="%F{green}⬢ ${prompt_pure_node_version}%f"
