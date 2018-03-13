@@ -391,7 +391,23 @@ prompt_pure_setup() {
 	[[ $UID -eq 0 ]] && prompt_pure_username=' %F{white}%n%f%F{242}@%m%f'
 
 	# prompt turns red if the previous command didn't exit with 0
-	PROMPT="%(?.%F{yellow}.%F{red})${PURE_PROMPT_SYMBOL:-λ}%f "
+	PROMPT_RETURN_CODE="%(?.%F{yellow}.%F{red})${PURE_PROMPT_SYMBOL:-λ}%f "
+	PROMPT_SIMPLE="%F{yellow}${PURE_PROMPT_SYMBOL:-λ}%f "
+
+	PROMPT=$PROMPT_RETURN_CODE
+
+	# clear status of last command when an empty command is given (= hit enter without a command)
+	function accept-line-or-clear-warning () {
+			if [[ -z $BUFFER ]]; then
+					PROMPT=$PROMPT_SIMPLE
+			else
+					PROMPT=$PROMPT_RETURN_CODE
+			fi
+			zle accept-line
+	}
+
+	zle -N accept-line-or-clear-warning
+	bindkey '^M' accept-line-or-clear-warning
 }
 
 prompt_pure_setup "$@"

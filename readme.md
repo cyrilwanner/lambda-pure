@@ -7,6 +7,7 @@ This is a fork of [marszall87/lambda-pure](https://github.com/marszall87/lambda-
 * Updated async.zsh so it works with newer versions of zsh
 * Change default git arrows to the original ones: ⇣ and ⇡
 * Add the current time to the end of the prompt
+* Resets last exit code on an empty command
 
 ## Overview
 
